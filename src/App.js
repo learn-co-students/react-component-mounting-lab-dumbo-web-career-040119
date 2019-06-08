@@ -12,7 +12,11 @@ class App extends Component {
 
   //Your code here:
 
-
+  componentDidMount(){
+    this.setState(prevState => ({
+      timerIDs: [...prevState.timerIDs, Math.floor(Math.random()*1000)]
+    }))
+  }
 
 
 
